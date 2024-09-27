@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('https://t4.ftcdn.net/jpg/04/94/85/25/360_F_494852538_r8ylVApdAY0YuWYCkWIsg5pDZkboERYI.jpg')] bg  bg-cover h-screen  -z-10 absolute text-slate-700    `}
       >
         <Novbar />
-        <main className="aligen-content ">{children}</main>
+        <main className="aligen-content  ">{children}</main>
       </body>
     </html>
   );
