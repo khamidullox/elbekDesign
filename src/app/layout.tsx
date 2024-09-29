@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Novbar from "@/components/Novbar";
+import { SiVorondesign } from "react-icons/si";
 import "./globals.css";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,6 +17,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Elbek Desinger",
   description: "Buyurtma qilish ",
+  icons: { icon: "https://cdn-icons-png.flaticon.com/512/3419/3419304.png" },
 };
 
 export default function RootLayout({
@@ -26,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('https://t4.ftcdn.net/jpg/04/94/85/25/360_F_494852538_r8ylVApdAY0YuWYCkWIsg5pDZkboERYI.jpg')] bg  bg-cover h-screen  -z-10 absolute text-slate-700    `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('https://t4.ftcdn.net/jpg/04/94/85/25/360_F_494852538_r8ylVApdAY0YuWYCkWIsg5pDZkboERYI.jpg')] bg  bg-cover overflow-auto h-full max-h-full  -z-10 absolute text-slate-700    `}
       >
         <Novbar />
         <main className="aligen-content  ">{children}</main>

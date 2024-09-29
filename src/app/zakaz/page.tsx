@@ -1,7 +1,11 @@
-import React from "react";
+import ListOrder from "@/components/ListOrder";
 
 function Zakaz() {
-  return <div>Zakaz</div>;
+  return (
+    <div className="mt-5">
+      <ListOrder />
+    </div>
+  );
 }
 
 export default Zakaz;

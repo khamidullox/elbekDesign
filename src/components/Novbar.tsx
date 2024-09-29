@@ -54,12 +54,12 @@ function Novbar() {
                 <span>Buyurtma berish</span>{" "}
               </Link>
             </li>
-            <li className={styles.navbar__item}>
+            {/* <li className={styles.navbar__item}>
               <Link href="/about" className={styles.navbar__link}>
                 <i data-feather="message-square"></i>
                 <span>About</span>
               </Link>
-            </li>
+            </li> */}
             <li className={styles.navbar__item}>
               <Link href="/zakaz" className={styles.navbar__link}>
                 <i data-feather="users"></i>

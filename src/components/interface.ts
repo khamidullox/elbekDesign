@@ -16,3 +16,10 @@ export interface FormValue {
   number: number;
   design: string;
 }
+export interface BaseDoc {
+  id: string;
+  name: string;
+  number: string;
+  design: string;
+  createAt: any;
+}

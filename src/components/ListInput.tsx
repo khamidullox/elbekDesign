@@ -3,7 +3,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import InputForm from "./InputForm";
 import { FormValue } from "./interface";
 import { FiSend } from "react-icons/fi";
-import useBase from "@/hooks/useBase";
+import { useBase } from "@/hooks/useBase";
 function ListInput() {
   const [formData, setFormData] = useState<FormValue>({
     name: "",
@@ -18,7 +18,7 @@ function ListInput() {
     setFormData({ ...formData, [name]: value });
   };
 
-  let { handleSumbit } = useBase();
+  let { handleSumbit } = useBase(formData);
 
   return (
     <>
