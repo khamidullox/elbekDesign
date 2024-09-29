@@ -5,20 +5,20 @@ import { FormValue } from "./interface";
 import { FiSend } from "react-icons/fi";
 import { useBase } from "@/hooks/useBase";
 function ListInput() {
-  let [formData, setFormData] = useState<FormValue>({
+  const [formData, setFormData] = useState<FormValue>({
     name: "",
     number: +998,
     design: "",
   });
 
-  let handleChange = (
+  const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    let { name, value } = e.target;
+    const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  let { handleSumbit } = useBase();
+  const { handleSumbit } = useBase();
 
   return (
     <>

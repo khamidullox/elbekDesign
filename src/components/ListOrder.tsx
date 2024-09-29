@@ -7,7 +7,7 @@ import Loading from "./Loading";
 import { useState } from "react";
 const ListOrder = () => {
   const { base } = useBase();
-  let [expandedOrderId, setExpandedOrderId] = useState<string | null>(null);
+  const [expandedOrderId, setExpandedOrderId] = useState<string | null>(null);
 
   const toggleExpand = (id: string) => {
     // Если элемент уже раскрыт, то свернем его, иначе раскроем новый

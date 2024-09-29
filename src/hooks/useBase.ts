@@ -20,14 +20,14 @@ import {
 import { db } from "@/firebase/firebaseConfig";
 
 // Хук для работы с Firebase
-let useBase = () => {
-  let [base, setBase] = useState<BaseDoc[] | null>(null);
+const useBase = () => {
+  const [base, setBase] = useState<BaseDoc[] | null>(null);
 
   // Получение данных из Firestore
   useEffect(() => {
-    let q = query(collection(db, "order"), orderBy("createAt"));
-    let unsubscribe = onSnapshot(q, (querySnapshot) => {
-      let cities: BaseDoc[] = [];
+    const q = query(collection(db, "order"), orderBy("createAt"));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const cities: BaseDoc[] = [];
       querySnapshot.forEach((doc: QueryDocumentSnapshot) => {
         const data = doc.data();
         cities.push({
@@ -45,7 +45,7 @@ let useBase = () => {
   }, []);
 
   // Обработка отправки данных
-  let handleSumbit = async (
+  const handleSumbit = async (
     e: FormEvent,
     FormValue: FormValue,
     setFormData: Dispatch<SetStateAction<FormValue>>
