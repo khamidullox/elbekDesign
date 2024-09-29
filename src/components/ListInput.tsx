@@ -1,24 +1,24 @@
 "use client";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import InputForm from "./InputForm";
 import { FormValue } from "./interface";
 import { FiSend } from "react-icons/fi";
 import { useBase } from "@/hooks/useBase";
 function ListInput() {
-  const [formData, setFormData] = useState<FormValue>({
+  let [formData, setFormData] = useState<FormValue>({
     name: "",
     number: +998,
     design: "",
   });
 
-  const handleChange = (
+  let handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  let { handleSumbit } = useBase(formData);
+  let { handleSumbit } = useBase();
 
   return (
     <>

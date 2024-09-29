@@ -21,5 +21,5 @@ export interface BaseDoc {
   name: string;
   number: string;
   design: string;
-  createAt: any;
+  createAt: string | number;
 }

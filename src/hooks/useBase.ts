@@ -15,20 +15,28 @@ import {
   query,
   orderBy,
   onSnapshot,
+  QueryDocumentSnapshot,
 } from "firebase/firestore";
 import { db } from "@/firebase/firebaseConfig";
 
 // Хук для работы с Firebase
-const useBase = (plan?: FormValue) => {
+let useBase = () => {
   let [base, setBase] = useState<BaseDoc[] | null>(null);
 
   // Получение данных из Firestore
   useEffect(() => {
-    const q = query(collection(db, "order"), orderBy("createAt"));
-    const unsubscribe = onSnapshot(q, (querySnapshot: any) => {
-      const cities: BaseDoc[] = [];
-      querySnapshot.forEach((doc: any) => {
-        cities.push({ ...doc.data(), id: doc.id });
+    let q = query(collection(db, "order"), orderBy("createAt"));
+    let unsubscribe = onSnapshot(q, (querySnapshot) => {
+      let cities: BaseDoc[] = [];
+      querySnapshot.forEach((doc: QueryDocumentSnapshot) => {
+        const data = doc.data();
+        cities.push({
+          id: doc.id,
+          name: data.name || "", // обработайте возможное отсутствие поля
+          number: data.number || "",
+          design: data.design || "",
+          createAt: data.createAt || 0, // или задайте значение по умолчанию
+        });
       });
       setBase(cities);
     });
