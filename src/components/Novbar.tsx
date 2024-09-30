@@ -43,7 +43,8 @@ function Novbar() {
         <div className={`${styles.header__logo}`}>
           <Link href="/" className=" ">
             <MdOutlineDesignServices />
-            <span>ELBEK Design</span>
+            <span className="">ELBEK Design</span>
+  
           </Link>
         </div>
         <nav className={`${styles.navbar} `}>

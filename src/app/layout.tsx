@@ -16,7 +16,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Elbek Desinger",
   description: "Buyurtma qilish ",
-  icons: { icon: "https://cdn-icons-png.flaticon.com/512/3419/3419304.png" },
+  icons: { icon: "/dddd.png" },
 };
 
 export default function RootLayout({
