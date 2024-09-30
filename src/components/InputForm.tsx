@@ -20,7 +20,7 @@ const InputForm: React.FC<InputFormProps> = ({
       {textarea ? (
         <textarea
           name={name}
-          className={`${classInput} w-full rounded-2xl outline-none h-52 resize-none px-5 py-2 font-mono focus:border-blue-500 focus:border-2`}
+          className={`${classInput} bg-white w-full rounded-2xl outline-none h-52 resize-none px-5 py-2 font-mono focus:border-blue-500 focus:border-2`}
           value={value}
           onChange={onChange}
         />
@@ -29,7 +29,7 @@ const InputForm: React.FC<InputFormProps> = ({
           name={name}
           type={type}
           value={value}
-          className={`${classInput} font-bold rounded-xl focus:border-blue-500 focus:border-2 outline-none h-10 pl-5 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`}
+          className={`${classInput} bg-white font-bold rounded-xl focus:border-blue-500 focus:border-2 outline-none h-10 pl-5 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`}
           onChange={onChange}
         />
       )}
